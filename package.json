@@ -1,0 +1,25 @@
+{
+  "name": "redux-mw-dispatcher",
+  "version": "0.1.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha --compilers js:babel-core/register test/*.js",
+    "preversion": "npm test",
+    "version": "babel src --out-dir lib",
+    "postversion": "git push && git push --tags"
+  },
+  "keywords": [
+    "redux",
+    "middleware"
+  ],
+  "author": "Alexander C Rees <me@acrees.co.uk>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-core": "^6.23.1",
+    "babel-preset-es2015": "^6.22.0",
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
+}
