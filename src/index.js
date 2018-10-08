@@ -9,7 +9,10 @@ export default function dispatcher(name, funs, log = console.log) {
       return;
     }
 
-    log("Dispatcher for '" + name + "' has no registered handler for '" + actionName + "'");
+    if (log) {
+      log("Dispatcher for '" + name + "' has no registered handler for '" + actionName + "'");
+    }
+
     return next(action);
   };
 }

@@ -31,4 +31,11 @@ describe('dispatcher', () => {
     Chai.expect(result).to.be.undefined;
     called.should.equal(true);
   });
+  it('should allow disabling console logging', () => {
+    var sut = dispatcher('test', { }, false);
+
+    var result = sut({})(_ => 1)({ type: 'test/x' });
+
+    result.should.equal(1);
+  });
 });
